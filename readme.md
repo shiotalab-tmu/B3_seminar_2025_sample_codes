@@ -22,6 +22,8 @@
 2. `Download ZIP`を選択してZIPでダウンロード
 3. ZIPを展開
 
+以降はClone/展開したディレクトリで作業してください．
+
 ## uvのインストール
 パッケージ管理には[uv](https://docs.astral.sh/uv/)を使用します．
 [公式インストールガイド](https://docs.astral.sh/uv/getting-started/installation/)に従ってインストールコマンドを実行してください．
