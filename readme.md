@@ -1,20 +1,32 @@
 # B3_seminar_2025
 塩田研 2025年度 B3ゼミナール
 
-## はじめに（環境構築）
-プログラムを実行するための環境を構築します．
+ここでは，プログラムを実行するための環境を構築します．
 - 各自のPCで実行することを想定しています．
   - WSLを使っている人はすぐ環境構築できると思います．
   - よくわからない人は山口に聞くか，GoogleColabを使ってください．
 
-### コードをGitHubから取得する
-TODO
+## コードをGitHubから取得する
+リポジトリからコードを取得します．
+![コード取得方法](<clone_instruction.png>)
+### Gitが使える場合
+1. Codeボタンをクリック
+2. HTTPSを選択
+3. アイコンをクリックしてURLをコピー
+4. 自分のマシンにClone
+  ```shell
+  git clone https://github.com/***.git
+  ```
+### Gitがよくわからない場合
+1. Codeボタンをクリック
+2. `Download ZIP`を選択してZIPでダウンロード
+3. ZIPを展開
 
-### uvのインストール
+## uvのインストール
 パッケージ管理には[uv](https://docs.astral.sh/uv/)を使用します．
 [公式インストールガイド](https://docs.astral.sh/uv/getting-started/installation/)に従ってインストールコマンドを実行してください．
 
-### 実行環境の準備
+## 実行環境の準備
 以下のコマンドを実行してください．
 
 1. 環境の初期化
@@ -30,5 +42,5 @@ uv python pin 3.11
 uv add librosa scipy matplotlib ipykernel
 ```
 
-### プログラムの動かし方
+## プログラムの動かし方
 `handson/*.ipynb`に参考コードがまとめてあります．VSCodeか何かでファイルを開き，セルの実行時に`b3-seminar`みたいな環境名を選択して実行してください．
