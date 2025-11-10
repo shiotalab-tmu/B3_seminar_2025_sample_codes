@@ -2,7 +2,6 @@ import scipy
 import matplotlib.pyplot as plt
 import numpy as np
 import librosa
-from pathlib import Path
 
 
 def plot_filter(b, a, N, btype, sr, cutoff_freq):
