@@ -31,4 +31,4 @@ uv add librosa scipy matplotlib ipykernel
 ```
 
 ### プログラムの動かし方
-`.ipynb`に参考コードがまとめてあります．VSCodeか何かでファイルを開き，セルの実行時に`b3-seminar`みたいな環境名を選択して実行してください．
+`handson/*.ipynb`に参考コードがまとめてあります．VSCodeか何かでファイルを開き，セルの実行時に`b3-seminar`みたいな環境名を選択して実行してください．
