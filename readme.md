@@ -22,7 +22,7 @@
 2. `Download ZIP`を選択してZIPでダウンロード
 3. ZIPを展開
 
-以降はClone/展開したディレクトリで作業してください．
+以降はClone/展開したディレクトリをVSCodeで開いて作業してください．
 
 ## uvのインストール
 パッケージ管理には[uv](https://docs.astral.sh/uv/)を使用します．
@@ -30,19 +30,23 @@
 
 ## 実行環境の準備
 以下のコマンドを実行してください．
-
+> `.venv`, `pyproject.toml`, `uv.lock`がある場合は，これらを削除してからコマンドを実行してください．
 1. 環境の初期化
-```shell
-uv init . --python 3.11 --bare
-```
-2. pythonのバージョンを指定
-```shell
-uv python pin 3.11
-```
-3. 必要なパッケージを追加
-```shell
-uv add librosa scipy matplotlib ipykernel
-```
+    ```shell
+    uv init --name b3-seminar-2025 --python 3.11 --bare
+    ```
+2. 必要なパッケージを追加
+    ```shell
+    uv add librosa scipy matplotlib ipykernel speechbrain "torchaudio<2.9.0" "huggingface-hub<0.17.0"
+    ```
 
 ## プログラムの動かし方
-`handson/*.ipynb`に参考コードがまとめてあります．VSCodeか何かでファイルを開き，セルの実行時に`b3-seminar`みたいな環境名を選択して実行してください．
+- はじめに: 環境のアクティベート
+    ```shell
+    source .venv/bin/activate
+    ```
+  - VSCodeのターミナルを開き直しても可
+- `.ipynb`の実行
+  - 画面右上の`カーネルの選択`から，`Python環境`→`★ b3-seminar-2025`を選択
+- `.py`の実行
+  - `uv run python **.py`で実行してください．
