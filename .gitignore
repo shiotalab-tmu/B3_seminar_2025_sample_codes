@@ -1,5 +1,5 @@
 # 環境構築を経験してほしいので，環境関連のファイルは追跡しない
-pyproject.toml
+# pyproject.toml
 uv.lock
 .python-version
 
