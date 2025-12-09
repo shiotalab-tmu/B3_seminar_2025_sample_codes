@@ -30,15 +30,17 @@
 
 ## 実行環境の準備
 以下のコマンドを実行してください．
-> `.venv`, `pyproject.toml`, `uv.lock`がある場合は，これらを削除してからコマンドを実行してください．
-1. 環境の初期化
-    ```shell
-    uv init --name b3-seminar-2025 --python 3.11 --bare
-    ```
-2. 必要なパッケージを追加
-    ```shell
-    uv add librosa scipy matplotlib ipykernel speechbrain "torchaudio<2.9.0" "huggingface-hub<0.17.0"
-    ```
+> 既に環境構築済みの人は，`pyproject.toml`を最新のものに置き換えてから以下のコマンドを実行してください．
+
+使用するモデルに応じて環境をセットアップ：
+- **デフォルト環境**（ECAPA-TDNNなど，CosyVoice以外）：
+  ```shell
+  uv sync --extra default
+  ```
+- **CosyVoiceを使用する場合：**
+  ```shell
+  uv sync --extra cosyvoice
+  ```
 
 ## プログラムの動かし方
 - はじめに: 環境のアクティベート
